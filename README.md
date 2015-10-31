@@ -2,7 +2,6 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pretty_date`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +21,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+PrettyDate.format Time.now
+# => just now
+
+PrettyDate.format Time.now - 60 * 10
+# => 10 minutes ago
+
+PrettyDate.format Time.now - 60 * 60 * 10
+# => 10 hours ago
+
+PrettyDate.format Time.now - 60 * 60 * 24
+# => yesterday
+
+PrettyDate.format Time.now - 60 * 60 * 24 * 7
+# => 1 week ago
+```
 
 ## Development
 
